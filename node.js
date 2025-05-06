@@ -65,5 +65,4 @@ app.use((req, res) => {
   res.status(404).sendFile(__dirname + '/views/404.ejs');
 });
 
-
 module.exports = app;
