@@ -61,4 +61,9 @@ app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
 
+app.use((req, res) => {
+  res.status(404).sendFile(__dirname + '404.ejs');
+});
+
+
 module.exports = app;
