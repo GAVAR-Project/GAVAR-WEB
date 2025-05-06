@@ -62,7 +62,7 @@ app.listen(port, () => {
 });
 
 app.use((req, res) => {
-  res.status(404).sendFile(__dirname + '404.ejs');
+  res.status(404).sendFile(__dirname + '/views/404.ejs');
 });
 
 
