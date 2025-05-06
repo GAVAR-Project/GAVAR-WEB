@@ -1,0 +1,31 @@
+<section class="dev-container">
+  <h1>Development Log</h1>
+  <div class="filter-dropdown">
+    <label for="tag-select">Filter by tag:</label>
+    <select id="tag-select" onchange="filterByTag(this.value)">
+      <option value="all">All</option>
+      <% allTags.forEach(tag => { %>
+        <option value="<%= tag %>"><%= tag %></option>
+      <% }) %>
+    </select>
+  </div>
+
+  <% Object.entries(groupedPosts).forEach(([month, posts]) => { %>
+    <details>
+      <summary><strong><%= month %></strong></summary>
+      <% posts.forEach(post => { %>
+        <details class="post-entry" data-tags="<%= post.tags.join(',') %>">
+          <summary>
+            <%= post.date %> — <%= post.title %><br>
+            <% if (post.tags.length) { %>
+              <span class="tags">~<%= post.tags.join(', ') %>~</span>
+            <% } %>
+          </summary>
+          <div class="post-content"><%- post.content %></div>
+        </details>
+      <% }) %>
+
+    </details>
+  <% }) %>
+</section>
+<script src="/js/dev.js"></script>

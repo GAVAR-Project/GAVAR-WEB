@@ -1,0 +1,245 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding-top: 4.5rem;
+  background: #1b1b1b;
+  color: #f4f4f4;
+}
+
+.ctext {
+  font-family: 'Segoe UI', sans-serif;
+  color: #f4f4f4;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b1f3a;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #ffd700;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 4.5rem;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffd700;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 0.75rem;
+  filter: drop-shadow(0 0 3px #0ba043);
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  background-color: #11325c;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #11325c;
+}
+
+.nav-links a {
+  margin: 0 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #085626; /* lavender/royal */
+  border-radius: 6px;
+  text-decoration: none;
+  color: #ffd700;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(19, 131, 34, 0.5);
+}
+
+.nav-links a:hover {
+  background-color: #0ba043;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(12, 131, 41, 0.6);
+  transform: scale(1.05);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(145deg, #222, #333);
+}
+
+.tagline {
+  font-style: italic;
+  color: #ccc;
+}
+
+.mission {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-card {
+  background: #222;
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 250px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-card:hover {
+  background: #333;
+  transform: scale(1.03);
+}
+
+.site-footer {
+  background-color: #0b1f3a;
+  color: #ffcc00;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 2px solid #ffcc00;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-quote {
+  font-style: italic;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-copy {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.footer-glyph {
+  width: 196px;
+  filter: drop-shadow(0 0 5px #0ba043);
+}
+
+a {
+  color: #0ba043;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 6rem;
+  color: #f8e9ff;
+  font-family: 'Georgia', serif;
+}
+
+.about-container h1,
+.about-container h2 {
+  color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.about-container section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #11325c;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(168, 95, 225, 0.2);
+}
+
+.dev-container {
+  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.dev-post h2 {
+  color: #e1d4ff;
+  margin-top: 2rem;
+}
+
+.post-content p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+h4 {
+  color: #0ba043;
+}
+
+details {
+  margin: 1rem 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.post-entry {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #a678f5;
+}
+
+.post-content {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #222;
+  color: #eee;
+}
+
+.filter-dropdown {
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+#tag-select {
+  padding: 0.05rem;
+  border-radius: 0.5rem;
+  background-color: #085626;
+  border: 4px solid #11325c;
+  font-size: 1rem;
+  height: auto;
+  color: #ccc;
+}
