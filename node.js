@@ -24,6 +24,12 @@ app.get('/docs/forumfiller', (req, res) => res.render('subdocs/forumfiller', { t
 app.get('/docs/notes', (req, res) => res.render('subdocs/notes', { title: 'Notes (Placeholder)' }));
 app.get('/docs/official', (req, res) => res.render('subdocs/official', { title: 'Official Documentation' }));
 
+app.get('/docs/official', (req, res) => {
+  const docsDir = path.join(__dirname, 'public', 'docs', 'official');
+  const files = fs.readdirSync(docsDir).filter(file => file.endsWith('.pdf'));
+  res.render('subdocs/official', { title: 'Official Docs', files }); // ✅ Add 'files' here
+});
+
 // dev route - dynamically loads dev posts from /devlogs folder
 app.get('/dev', (req, res) => {
   const logs = fs.readdirSync('./devlogs').filter((f) => f.endsWith('.md'));
