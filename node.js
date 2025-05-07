@@ -26,7 +26,7 @@ app.get('/docs/notes', (req, res) => res.render('subdocs/notes', { title: 'Notes
 app.get('/docs/official', (req, res) => {
   const docsDir = path.join(__dirname, 'public', 'docs', 'official');
   const files = fs.readdirSync(docsDir).filter(file => file.endsWith('.pdf'));
-  res.render('subdocs/official', { title: 'Official Docs', files }); // ✅ Add 'files' here
+  res.render('subdocs/official', { title: 'Official Docs', docs }); // ✅ Add 'files' here
 });
 
 // dev route - dynamically loads dev posts from /devlogs folder
