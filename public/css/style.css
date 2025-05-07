@@ -247,3 +247,32 @@ summary {
 h5 {
   color: #a678f5;
 }
+
+.docs-portal {
+  text-align: center;
+  padding: 2rem;
+}
+
+.doc-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.doc-card {
+  background: #1e1e1e;
+  color: #fff;
+  padding: 1.5rem;
+  width: 250px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doc-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
