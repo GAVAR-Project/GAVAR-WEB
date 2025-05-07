@@ -61,9 +61,11 @@ app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
 
+// 404 handler (MUST be after all routes)
 app.use((req, res) => {
-  res.status(404).sendFile(__dirname + '/views/404.ejs');
+  res.status(404).render('404', { title: 'Page Not Found' });
 });
+
 
 
 module.exports = app;
