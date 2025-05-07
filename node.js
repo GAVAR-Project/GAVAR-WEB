@@ -18,15 +18,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.get('/', (req, res) => res.render('index', { title: 'Home' }));
 app.get('/about', (req, res) => res.render('about', { title: 'About' }));
-app.get('/docs', (req, res) => res.render('docs', { title: 'Documentation', layout: 'layout'}));
+app.get('/docs', (req, res) => res.render('docs', { title: 'Documentation'}));
 
-app.get('/docs/forumfiller', (req, res) => res.render('subdocs/forumfiller', { title: 'Forum (Placeholder)', layout: 'layout'  }));
-app.get('/docs/notes', (req, res) => res.render('subdocs/notes', { title: 'Notes (Placeholder)', layout: 'layout'  }));
+app.get('/docs/forumfiller', (req, res) => res.render('subdocs/forumfiller', { title: 'Forum (Placeholder)'}));
+app.get('/docs/notes', (req, res) => res.render('subdocs/notes', { title: 'Notes (Placeholder)'}));
 
 app.get('/docs/official', (req, res) => {
   const docsDir = path.join(__dirname, 'public', 'docs', 'official');
   const files = fs.readdirSync(docsDir).filter(file => file.endsWith('.pdf'));
-  res.render('subdocs/official', { title: 'Official Docs', files, layout: 'layout' }); // ✅ Add 'files' here
+  res.render('subdocs/official', { title: 'Official Docs', files}); // ✅ Add 'files' here
 });
 
 // dev route - dynamically loads dev posts from /devlogs folder
