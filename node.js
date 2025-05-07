@@ -57,25 +57,6 @@ app.get('/dev', (req, res) => {
   });
 });
 
-app.get('/docs/notes', (req, res) => {
-  const notes = fs.readdirSync('./notes').filter(f => f.endsWith('.md'));
-  const rendered = notes.map(filename => {
-    const raw = fs.readFileSync(`./notes/${filename}`, 'utf-8');
-    const parsed = matter(raw);
-    return {
-      title: parsed.data.title || filename.replace('.md', ''),
-      content: marked.parse(parsed.content),
-    };
-  });
-  res.render('docs/notes', { title: 'GAVAR Notes', notes: rendered });
-});
-
-app.get('/docs/official', (req, res) => {
-  const files = fs.readdirSync('./public/docs/official')
-    .filter(file => file.endsWith('.pdf'));
-  res.render('docs/official', { title: 'Official Docs', files });
-});
-
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
@@ -83,5 +64,6 @@ app.listen(port, () => {
 app.use((req, res) => {
   res.status(404).sendFile(__dirname + '/views/404.ejs');
 });
+
 
 module.exports = app;
