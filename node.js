@@ -22,7 +22,7 @@ app.get('/docs', (req, res) => res.render('docs', { title: 'Documentation' }));
 
 app.get('/docs/forumfiller', (req, res) => res.render('subdocs/forumfiller', { title: 'Forum (Placeholder' }));
 app.get('/docs/notes', (req, res) => res.render('subdocs/notes', { title: 'Notes (Placeholder)' }));
-app.get('/docs/official', (req, res) => res.render('subdocs/notes', { title: 'Official Documentation' }));
+app.get('/docs/official', (req, res) => res.render('subdocs/official', { title: 'Official Documentation' }));
 
 // dev route - dynamically loads dev posts from /devlogs folder
 app.get('/dev', (req, res) => {
