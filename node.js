@@ -12,6 +12,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts);
 app.set('layout', 'layout'); // This uses views/layout.ejs
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+
 // Serve static files (CSS, JS, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
