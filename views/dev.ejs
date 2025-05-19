@@ -9,6 +9,8 @@
       <% }) %>
     </select>
   </div>
+  
+  <input type="text" id="searchInput" placeholder="Search posts...">
 
   <% Object.entries(groupedPosts).forEach(([month, posts]) => { %>
     <details>
@@ -18,7 +20,7 @@
           <summary>
             <%= post.date %> — <%= post.title %><br>
             <% if (post.tags.length) { %>
-              <span class="tags">~<%= post.tags.join(', ') %>~</span>
+              <span class="tags">~<%= post.tags.join(',') %>~</span>
             <% } %>
           </summary>
           <div class="post-content"><%- post.content %></div>
