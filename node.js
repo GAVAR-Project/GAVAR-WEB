@@ -4,6 +4,7 @@ const fs = require('fs');
 const marked = require('marked');
 const expressLayouts = require('express-ejs-layouts');
 const matter = require('gray-matter');
+const favicon = require('serve-favicon');
 const app = express();
 const port = process.env.PORT || 3000;
 
