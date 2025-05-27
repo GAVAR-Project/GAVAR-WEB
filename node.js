@@ -61,9 +61,7 @@ app.get('/dev', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
-});
+app.listen(3000, '0.0.0.0');
 
 // 404 handler (MUST be after all routes)
 app.use((req, res) => {
